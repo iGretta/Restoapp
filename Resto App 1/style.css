@@ -1,0 +1,129 @@
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter-Italic';
+  src: url('./fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('ttf');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  overflow-x: auto; /* Горизонтальный скролл при ширине < 1440px */
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #FFD700, #FFA500); /* Градиент */
+  z-index: -1;
+}
+
+.header__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+}
+
+.header__nav {
+  flex: 1;
+}
+
+.header__menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.header__contacts {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Адаптация под ширину экрана > 1440px */
+@media (min-width: 1440px) {
+  .header {
+    overflow-x: hidden; /* Убираем скролл */
+  }
+  .header__container {
+    padding: 20px 0;
+  }
+}
+
+.menu {
+  padding: 40px 0;
+}
+
+.menu__title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.menu__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu__card {
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.menu__card:hover {
+  transform: translateY(-5px);
+}
+
+.menu__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu__title-card {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
