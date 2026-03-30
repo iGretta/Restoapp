@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+.body {
+  min-width: 1440px;
+}
+
 .header {
   overflow-x: auto; /* Горизонтальный скролл при ширине < 1440px */
   position: relative;
